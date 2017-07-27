@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoSolderService", "AutoSolderService\AutoSolderService.csproj", "{D91FF871-57A0-4C19-A873-0772E2ACDE22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStore", "DataStore\DataStore.csproj", "{521FB77D-C4CC-4C25-BB3E-CFF48BBC7810}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDataStore", "IDataStore\IDataStore.csproj", "{537126F7-A70E-47F8-A968-1ED39A03EC3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{C537B8D3-E23B-4A30-93A6-51156DB502F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D65AB1EA-F314-45D4-A9A3-C0C98FCC7E48}"
+	ProjectSection(SolutionItems) = preProject
+		Performance1.psess = Performance1.psess
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{BC717024-F3FE-4B3C-BE50-35137BB444C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D91FF871-57A0-4C19-A873-0772E2ACDE22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D91FF871-57A0-4C19-A873-0772E2ACDE22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D91FF871-57A0-4C19-A873-0772E2ACDE22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D91FF871-57A0-4C19-A873-0772E2ACDE22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{521FB77D-C4CC-4C25-BB3E-CFF48BBC7810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{521FB77D-C4CC-4C25-BB3E-CFF48BBC7810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{521FB77D-C4CC-4C25-BB3E-CFF48BBC7810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{521FB77D-C4CC-4C25-BB3E-CFF48BBC7810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{537126F7-A70E-47F8-A968-1ED39A03EC3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{537126F7-A70E-47F8-A968-1ED39A03EC3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{537126F7-A70E-47F8-A968-1ED39A03EC3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{537126F7-A70E-47F8-A968-1ED39A03EC3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C537B8D3-E23B-4A30-93A6-51156DB502F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C537B8D3-E23B-4A30-93A6-51156DB502F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C537B8D3-E23B-4A30-93A6-51156DB502F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C537B8D3-E23B-4A30-93A6-51156DB502F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC717024-F3FE-4B3C-BE50-35137BB444C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC717024-F3FE-4B3C-BE50-35137BB444C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC717024-F3FE-4B3C-BE50-35137BB444C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC717024-F3FE-4B3C-BE50-35137BB444C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+EndGlobal
