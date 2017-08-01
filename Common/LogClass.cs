@@ -38,10 +38,10 @@ namespace Common
             {
                 /**/
                 ///文件超过10MB则重命名
-                File.Move(@"D:\\AutosolderNet\\LOGFile.txt", @"D:\\AutosolderNet\\" + DateTime.Now.ToString("yyyyMMdd") + "LogFile.txt");
+                //File.Move(@"D:\\AutosolderNet\\LOGFile.txt", @"D:\\AutosolderNet\\" + DateTime.Now.ToString("yyyyMMdd") + "LogFile.txt");
                 /**/
                 ///删除该文件
-                //finfo.Delete();
+                finfo.Delete();
             }
             //finfo.AppendText();
             /**/

@@ -57,45 +57,47 @@ namespace test
 
         static void Main(string[] args)
         {
-            try
-            {
-                Console.WriteLine("start");
+
+            File.Move(@"D:\\AutosolderNet\\LOGFile.txt", @"D:\\AutosolderNet\\" + DateTime.Now.ToString("yyyyMMdd") + "LogFile.txt");
+            //try
+            //{
+            //    Console.WriteLine("start");
 
 
-                AutosolderServiceFun fun = null;
+            //    AutosolderServiceFun fun = null;
 
-                fun = new AutosolderServiceFun();
+            //    fun = new AutosolderServiceFun();
 
-                FileSystemWatcher watcher = new FileSystemWatcher();
-                watcher.Path = "D:\\AutosolderNet";
-                watcher.NotifyFilter = NotifyFilters.LastWrite;
+            //    FileSystemWatcher watcher = new FileSystemWatcher();
+            //    watcher.Path = "D:\\AutosolderNet";
+            //    watcher.NotifyFilter = NotifyFilters.LastWrite;
 
-                watcher.Changed += (object source, FileSystemEventArgs e) =>
-                {
-                    watcher.EnableRaisingEvents = false;
-                    // Console.WriteLine("change");
-                    Console.WriteLine("文件{0}已经被修改,修改类型{1}", e.FullPath, e.ChangeType.ToString());
-                    ServiceController serv = new ServiceController("Autosolder");
-                    object s = serv.Status;
-                    // fun.closeThread();
-                    //fun = null;
-                    //fun = new AutosolderServiceFun();
-                    //string path = "D:\\AutosolderNet\\AutoSolderReStart.bat";
-                    // Console.WriteLine(path);
-                    //ExecuteBatFile(path);
-                    //RestartService();
-                    Environment.Exit(1);
-                    watcher.EnableRaisingEvents = true;
-                };
-                watcher.EnableRaisingEvents = true;
-                Console.WriteLine("...");
-                Console.ReadKey();
-            }
-            catch (Exception e)
-            {
+            //    watcher.Changed += (object source, FileSystemEventArgs e) =>
+            //    {
+            //        watcher.EnableRaisingEvents = false;
+            //        // Console.WriteLine("change");
+            //        Console.WriteLine("文件{0}已经被修改,修改类型{1}", e.FullPath, e.ChangeType.ToString());
+            //        ServiceController serv = new ServiceController("Autosolder");
+            //        object s = serv.Status;
+            //        // fun.closeThread();
+            //        //fun = null;
+            //        //fun = new AutosolderServiceFun();
+            //        //string path = "D:\\AutosolderNet\\AutoSolderReStart.bat";
+            //        // Console.WriteLine(path);
+            //        //ExecuteBatFile(path);
+            //        //RestartService();
+            //        Environment.Exit(1);
+            //        watcher.EnableRaisingEvents = true;
+            //    };
+            //    watcher.EnableRaisingEvents = true;
+            //    Console.WriteLine("...");
+            //    Console.ReadKey();
+            //}
+            //catch (Exception e)
+            //{
 
-                throw;
-            }
+            //    throw;
+            //}
             //DbConfig dbconfig = new DbConfig();
             //dbconfig.Catalog = "dbtest";
             //dbconfig.Source = "localtest";

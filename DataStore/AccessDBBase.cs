@@ -51,11 +51,11 @@ namespace DataStore
             bool issuc = true;
 
             //MySqlErrorCode error = MySqlErrorCode.Yes;
-
+            string rootmysqlStr = "Data Source=localhost;User Id=" + user + "; Password=" + pwd + "; " + "pooling=false;CharSet=utf8;port=" + port.ToString() + ";";
+            MySqlConnection mycon = new MySqlConnection(rootmysqlStr);
             try
             {
-                string rootmysqlStr = "Data Source=localhost;User Id=" + user + "; Password=" + pwd + "; " + "pooling=false;CharSet=utf8;port=" + port.ToString() + ";";
-                MySqlConnection mycon = new MySqlConnection(rootmysqlStr);
+               
                 mycon.Open();
                 MySqlCommand mycmd = new MySqlCommand("show databases", mycon);
                 mycmd.ExecuteNonQuery();
@@ -80,6 +80,7 @@ namespace DataStore
                 issuc = false;
                 //PISTrace.WriteStrLine("ExistDB     :" + e.Message);
                 LogClass.WriteLogFile("Class-AccessDBBase;Fun-ExistDB;行号81" + e.Message);
+                mycon.Close();
                 //throw;
             }
 
@@ -95,11 +96,11 @@ namespace DataStore
         protected static bool CreateDB(string dbname, string user, string pwd)
         {
             bool issuc = true;
-
+            string connstr = "Data Source=localhost;Persist Security Info=yes;User Id=" + user + "; PWD=" + pwd + ";";
+            MySqlConnection conn = new MySqlConnection(connstr);
             try
             {
-                string connstr = "Data Source=localhost;Persist Security Info=yes;User Id=" + user + "; PWD=" + pwd + ";";
-                MySqlConnection conn = new MySqlConnection(connstr);
+                
                 MySqlCommand cmd = new MySqlCommand("CREATE DATABASE " + dbname + ";", conn);
 
                 conn.Open();
@@ -111,7 +112,7 @@ namespace DataStore
                 issuc = false;
                 //PISTrace.WriteStrLine("CreateDB"+e.Message);
                 LogClass.WriteLogFile("Class-AccessDBBase;Fun-CreateDB;行号112;" + e.Message);
-                throw;
+                conn.Close();
             }
 
             return issuc;
@@ -158,6 +159,7 @@ namespace DataStore
                     {
                         issuc = false;
                     }
+                    conn.Close();
                 }
             }
             catch (MySqlException e)
